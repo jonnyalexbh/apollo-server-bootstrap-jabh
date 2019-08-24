@@ -1,15 +1,5 @@
 const { ApolloServer, gql, makeExecutableSchema } = require('apollo-server');
-
-const books = [
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-];
+const serviceBooks = require('./app/services/book');
 
 const typeDefs = gql`
   type Book {
@@ -23,7 +13,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    books: () => books,
+    books: () => serviceBooks.books,
   },
 };
 
