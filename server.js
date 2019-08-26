@@ -1,26 +1,5 @@
-const { ApolloServer, gql, makeExecutableSchema } = require('apollo-server');
-const serviceBooks = require('./app/services/book');
-
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-  type Query {
-    books: [Book]
-  }
-`;
-
-const resolvers = {
-  Query: {
-    books: () => serviceBooks.books,
-  },
-};
-
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers,
-});
+const { ApolloServer } = require('apollo-server');
+const schema = require('./app/graphql');
 
 const server = new ApolloServer({ schema });
 
