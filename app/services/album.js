@@ -1,12 +1,9 @@
-exports.albums = [
-  {
-    id: 1,
-    title: 'quidem molestiae enim',
-    userId: 1
-  },
-  {
-    id: 2,
-    title: 'sunt qui excepturi placeat culpa',
-    userId: 1
-  },
-];
+const axios = require('axios');
+
+exports.getAlbums = () =>
+  axios
+    .get(`https://jsonplaceholder.typicode.com/albums`)
+    .then(response => response.data)
+    .catch(() => {
+      throw new Error('Cannot fetch albums from external api');
+    });

@@ -1,9 +1,9 @@
 const { gql } = require('apollo-server'),
-  { albums } = require('../../services/album');
+  { getAlbums } = require('../../services/album');
 
 module.exports = {
   queries: {
-    albums: () => albums,
+    albums: async () => await getAlbums(),
   },
   schema: gql`
     extend type Query {
