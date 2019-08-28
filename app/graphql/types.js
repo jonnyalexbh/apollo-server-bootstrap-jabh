@@ -6,4 +6,9 @@ module.exports = gql`
     title: String
     author: String
   }
+  type Album {
+    id: ID!
+    title: String!
+    userId: Int!
+  }
 `;
