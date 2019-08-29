@@ -1,5 +1,5 @@
-const { gql } = require('apollo-server'),
-  serviceBooks = require('../../services/book');
+const { gql } = require('apollo-server');
+const serviceBooks = require('../../services/book');
 
 module.exports = {
   queries: {
@@ -9,5 +9,5 @@ module.exports = {
     extend type Query {
       books: [Book]
     }
-  `
+  `,
 };
