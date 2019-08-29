@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const config = {
   common: {
     albumsApi: {
-      url: 'https://jsonplaceholder.typicode.com',
+      url: process.env.PLACEHOLDER_URL,
     },
   },
 };
