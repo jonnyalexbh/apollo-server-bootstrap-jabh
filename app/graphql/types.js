@@ -11,4 +11,9 @@ module.exports = gql`
     title: String!
     userId: Int!
   }
+  type User {
+    id: ID!
+    name: String!
+    mobile: String
+  }
 `;
