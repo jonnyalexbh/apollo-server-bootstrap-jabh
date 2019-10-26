@@ -15,7 +15,8 @@
     "dotenv": "^8.1.0",
     "express-wolox-logger": "^1.1.0",
     "graphql": "^14.5.3",
-    "graphql-tools": "^4.0.5"
+    "graphql-tools": "^4.0.5",
+    "sequelize": "^5.21.1"
   },
   "devDependencies": {
     "eslint": "^6.2.2",
